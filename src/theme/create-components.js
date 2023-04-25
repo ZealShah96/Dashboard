@@ -65,7 +65,10 @@ export function createComponents(config) {
           padding: '32px 24px',
           '&:last-child': {
             paddingBottom: '32px'
-          }
+          },
+          border:'1px solid black',
+          borderRadius: '25px',
+          background: '#9d9dff'
         }
       }
     },

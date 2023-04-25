@@ -7,6 +7,7 @@ import {
   Card,
   CardContent,
   CardHeader,
+  formLabelClasses,
   Stack,
   SvgIcon,
   Typography,
@@ -36,6 +37,17 @@ const useChartOptions = (labels) => {
     plotOptions: {
       pie: {
         expandOnClick: false
+      },
+      radialBar: {
+        track: {
+          background: "#7CFC00"
+        },
+        dataLabels: {
+          value: {
+            fontSize: "30px",
+            show: true
+          }
+        }
       }
     },
     states: {
@@ -92,7 +104,7 @@ export const OverviewTraffic = (props) => {
           height={300}
           options={chartOptions}
           series={chartSeries}
-          type="donut"
+          type="radialBar"
           width="100%"
         />
         <Stack
